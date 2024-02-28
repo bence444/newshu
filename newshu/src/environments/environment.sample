@@ -1,0 +1,7 @@
+/// rename to environment.ts
+
+export const environment = {
+  production: true,
+  apiRoot: 'https://newsapi.org/v2/',
+  apiKey: ''
+};
