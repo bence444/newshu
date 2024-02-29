@@ -1,0 +1,1 @@
+export { newsApiInterceptor } from './news-api.interceptor';

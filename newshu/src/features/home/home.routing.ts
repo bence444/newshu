@@ -5,21 +5,22 @@ import { RouterModule, Routes } from '@angular/router';
 /* globally accessible app code in every feature module */
 
 /* locally accessible feature module code, always use relative path */
+import * as pages from './pages';
 
 
 const routes: Routes = [
   {
-    path: 'home',
-    loadChildren: () => import('../features/home').then(m => m.HomeModule)
+    path: '',
+    component: pages.HomePage
   },
   {
-    path: 'news',
-    loadChildren: () => import('../features/all-news').then(m => m.AllNewsModule)
+    path: '**',
+    redirectTo: '/home'
   }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class HomeRoutingModule { }

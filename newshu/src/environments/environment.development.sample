@@ -5,3 +5,9 @@ export const environment = {
   apiRoot: 'https://newsapi.org/v2/',
   apiKey: ''
 };
+
+/* 3rd party libraries */
+
+/* globally accessible app code in every feature module */
+
+/* locally accessible feature module code, always use relative path */
