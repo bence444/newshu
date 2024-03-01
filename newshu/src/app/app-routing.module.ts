@@ -10,7 +10,7 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: 'home',
-    loadChildren: () => import('../features/home').then(m => m.HomeModule)
+    loadChildren: () => import('../features/home').then(m => m.HomeModule),
   },
   {
     path: 'news',

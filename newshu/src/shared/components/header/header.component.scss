@@ -1,0 +1,36 @@
+.wrapper {
+  height: 100%;
+}
+
+mat-toolbar-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .left {
+    display: flex;
+    flex: 1 1 auto;
+    align-items: center;
+  }
+
+  .logo {
+    img {
+      height: 100%;
+      width: auto;
+    }
+  }
+
+  .menu {
+    display: flex;
+    margin-left: 1rem;
+
+    a {
+      margin-right: .5rem;
+
+      &:not(.active) {
+        background: transparent;
+        box-shadow: none;
+      }
+    }
+  }
+}

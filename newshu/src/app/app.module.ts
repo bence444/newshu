@@ -3,12 +3,11 @@ import { NgModule, isDevMode } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { provideHttpClient, withInterceptors } from '@angular/common/http';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 /* globally accessible app code in every feature module */
 import { CoreModule, newsApiInterceptor } from 'core';
 import { SharedModule } from 'shared';
-import { HomeModule } from 'features/home';
-import { AllNewsModule } from 'features/all-news';
 
 /* locally accessible feature module code, always use relative path */
 import { AppRoutingModule } from './app-routing.module';
@@ -19,7 +18,7 @@ import { GridLayout } from './grid/grid.layout';
 @NgModule({
   declarations: [
     AppComponent,
-    GridLayout
+    GridLayout,
   ],
   imports: [
     BrowserModule,
@@ -32,11 +31,10 @@ import { GridLayout } from './grid/grid.layout';
     }),
     CoreModule,
     SharedModule,
-    HomeModule,
-    AllNewsModule,
   ],
   providers: [
     provideHttpClient(withInterceptors([newsApiInterceptor])),
+    provideAnimationsAsync(),
   ],
   exports: [],
   bootstrap: [AppComponent]

@@ -1,19 +1,24 @@
 /* 3rd party libraries */
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { HomeRoutingModule } from './home.routing';
 
 /* globally accessible app code in every feature module */
+import { SharedModule } from 'shared';
 
 /* locally accessible feature module code, always use relative path */
+import { HomeRoutingModule } from './home.routing';
+import { pages } from './pages';
+import { components } from './components';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    ...pages,
+    ...components
+  ],
   imports: [
-    CommonModule,
+    SharedModule,
     HomeRoutingModule
-  ]
+  ],
 })
 export class HomeModule { }

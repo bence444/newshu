@@ -3,7 +3,7 @@ import { FooterComponent } from './footer/footer.component';
 
 export const components = [
   HeaderComponent,
-  FooterComponent
+  FooterComponent,
 ];
 
 export { HeaderComponent } from './header/header.component';

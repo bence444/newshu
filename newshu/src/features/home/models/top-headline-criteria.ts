@@ -1,10 +1,15 @@
 export class TopHeadlineCriteria {
 
-  // note: replace with enum for multilanguage
-  get country(): string { return 'hu'; }
+  public readonly country: string = 'hu';
+
+  public q: string = '';
 
   public category?: string;
 
   public sources?: string[];
+
+  constructor(data: object) {
+    Object.assign(this, data);
+  }
 
 }
