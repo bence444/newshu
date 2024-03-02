@@ -14,6 +14,10 @@ const routes: Routes = [
     component: pages.HomePage
   },
   {
+    'path': 'about-the-project',
+    component: pages.AboutPage
+  },
+  {
     path: '**',
     redirectTo: '/home'
   }

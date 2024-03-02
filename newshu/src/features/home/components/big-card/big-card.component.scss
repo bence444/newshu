@@ -1,0 +1,34 @@
+.wrapper {
+  display: flex;
+  flex: 1 1 auto;
+  height: 100%;
+}
+
+mat-card {
+  display: flex;
+  align-self: stretch;
+  height: 100%;
+}
+
+mat-card-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+
+  .title {
+    display: flex;
+    flex-grow: 1;
+  }
+
+  .author {
+    margin-top: .5rem;
+  }
+}
+
+mat-card-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+  background: var(--card-footer-background);
+  padding: 1rem;
+}

@@ -1,0 +1,22 @@
+<div class="wrapper">
+  <mat-card>
+    <mat-card-content>
+      <div class="title">
+        {{ article.title }}
+      </div>
+      
+      <div class="author">
+        <small>{{ article.author }}</small>
+      </div>
+    </mat-card-content>
+
+    <mat-card-footer>
+      <a
+        mat-stroked-button
+        color="primary"
+        [href]="article.url"
+        [target]="'_blank'"
+      >Elolvasom</a>
+    </mat-card-footer>
+  </mat-card>
+</div>

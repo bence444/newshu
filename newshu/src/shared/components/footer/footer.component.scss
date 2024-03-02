@@ -1,0 +1,9 @@
+mat-toolbar-row {
+  display: flex;
+  justify-content: center;
+
+  a {
+    color: var(--mat-app-text-color) !important;
+    text-decoration: none;
+  }
+}

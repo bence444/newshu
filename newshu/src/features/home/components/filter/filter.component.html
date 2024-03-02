@@ -2,11 +2,18 @@
   <form [formGroup]="formGroup">
     <div class="row">
       <mat-form-field>
-        <mat-label>Keresés..</mat-label>
+        <mat-label>Cím, leírás, szerző..</mat-label>
         <input matInput formControlName="q">
       </mat-form-field>
 
-      <button mat-raised-button color="primary">Keresés</button>
+      <button
+        mat-fab
+        enterKeyHint="seach"
+        color="primary"
+        (click)="clickSearch()"
+      >
+        <mat-icon>search</mat-icon>
+      </button>
     </div>
   </form>
 </div>

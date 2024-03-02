@@ -5,7 +5,7 @@
 }
 
 form {
-  width: 95%;
+  width: 85%;
   max-width: 720px;
   display: flex;
   align-items: center;
@@ -17,10 +17,7 @@ form {
     mat-form-field {
       flex: 1 1 auto;
       margin-right: 2rem;
+      margin-top: 1.25rem;
     }
   }
-}
-
-* {
-  border: 1px solid white;
 }

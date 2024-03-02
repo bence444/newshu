@@ -14,7 +14,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
 })
 export class LayoutService {
 
-  private _isMobile = new BehaviorSubject<boolean>(true);
+  private _isMobile$ = new BehaviorSubject<boolean>(true);
 
   constructor(
     platform: Platform,
@@ -26,17 +26,17 @@ export class LayoutService {
         Breakpoints.Small,
         Breakpoints.HandsetPortrait
       ]).subscribe(result => {
-        this._isMobile.next(result.matches);
+        this._isMobile$.next(result.matches);
       });
     }
   }
 
   get isMobile(): boolean {
-    return this._isMobile.value;
+    return this._isMobile$.value;
   }
 
   get isMobile$(): Observable<boolean> {
-    return this._isMobile.asObservable();
+    return this._isMobile$.asObservable();
   }
   
 }

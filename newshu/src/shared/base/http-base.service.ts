@@ -17,7 +17,7 @@ export abstract class HttpBaseService {
     this._apiUrl = `${apiRoot}/${path}`;
   }
 
-  get apiUrl(): string {
+  protected get apiUrl(): string {
     return this._apiUrl;
   }
   

@@ -1,0 +1,22 @@
+.wrapper {
+  h2 { text-align: center; }
+
+  .card-wrapper {
+    display: flex;
+    flex: 1 1 auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    padding: 1rem;
+    &.desktop { padding: 3rem; }
+
+    app-big-card {
+      width: 100%;
+      @media only screen and (min-width: 564px) {
+        width: 250px;
+      }
+
+      margin: .5rem;
+    }
+  }
+}

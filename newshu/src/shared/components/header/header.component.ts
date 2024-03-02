@@ -15,8 +15,9 @@ import { AppService } from 'core';
 export class HeaderComponent {
 
   menus = [
-    { text: 'Főoldal', route: '/home' },
+    { text: 'Top hírek', route: '/home' },
     { text: 'Keresés', route: '/news' },
+    { text: 'A projektről', route: '/home/about-the-project' },
   ];
 
   activeRoute: string = '';

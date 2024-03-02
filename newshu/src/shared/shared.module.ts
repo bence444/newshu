@@ -9,6 +9,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatCardModule } from '@angular/material/card';
+import { MatPaginatorModule } from '@angular/material/paginator';
 //#endregion
 
 /* globally accessible app code in every feature module */
@@ -22,6 +24,8 @@ const material = [
   MatIconModule,
   MatFormFieldModule,
   MatInputModule,
+  MatCardModule,
+  MatPaginatorModule
 ];
 
 @NgModule({
